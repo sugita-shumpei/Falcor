@@ -98,7 +98,10 @@ Dictionary ImageLoader::getScriptingDictionary()
     Dictionary dict;
     dict[kOutputSize] = mOutputSizeSelection;
     if (mOutputFormat != ResourceFormat::Unknown) dict[kOutputFormat] = mOutputFormat;
-    dict[kImage] = stripDataDirectories(mImagePath);
+    auto path = stripDataDirectories(mImagePath);
+    if (!path.empty()) {
+        dict[kImage] = path;
+    }
     dict[kMips] = mGenerateMips;
     dict[kSrgb] = mLoadSRGB;
     dict[kArraySlice] = mArraySlice;

@@ -119,18 +119,22 @@ namespace Falcor
     static Scripting::RunResult runScript(const std::string& script, pybind11::dict& globals, bool captureOutput)
     {
         Scripting::RunResult result;
-
+        std::string tmp_script =  "";
+#if WIN32
+        tmp_script = "from pathlib import WindowsPath\n";
+#endif
+        tmp_script += script;
         if (captureOutput)
         {
             RedirectStream rstdout("stdout");
             RedirectStream rstderr("stderr");
-            pybind11::exec(script.c_str(), globals);
+            pybind11::exec(tmp_script.c_str(), globals);
             result.out = rstdout;
             result.err = rstderr;
         }
         else
         {
-            pybind11::exec(script.c_str(), globals);
+            pybind11::exec(tmp_script.c_str(), globals);
         }
 
         return result;
