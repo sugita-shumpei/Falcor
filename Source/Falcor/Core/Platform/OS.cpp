@@ -68,6 +68,8 @@ namespace Falcor
             projectDir,
             projectDir / "..",
             projectDir / ".." / "Tools" / "FalcorTest",
+            projectDir / ".." / ".." / "external"/"packman"/ "nanovdb" / "include",
+            projectDir / ".." / ".." / "external"/"packman"/ "rtxdi" / "rtxdi-sdk" / "include",
             // Then we search in deployment folder (necessary to pickup NVAPI and other third-party shaders).
             getExecutableDirectory() / "Shaders",
         };
