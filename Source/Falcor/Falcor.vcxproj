@@ -866,6 +866,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <AdditionalOptions>/bigobj</AdditionalOptions>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -904,6 +905,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <AdditionalOptions>/bigobj</AdditionalOptions>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -945,6 +947,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <AdditionalOptions>/bigobj</AdditionalOptions>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -987,6 +990,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <AdditionalOptions>/bigobj</AdditionalOptions>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

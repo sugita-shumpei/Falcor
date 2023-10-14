@@ -44,9 +44,9 @@ set NvApiDir=%ExtDir%\nvapi
 set NvApiTargetDir=%OutDir%\Shaders\NVAPI
 if exist %NvApiDir% (
     if not exist %NvApiTargetDir% mkdir %NvApiTargetDir% >nul
-    copy /y %NvApiDir%\nvHLSLExtns.h %NvApiTargetDir%
-    copy /y %NvApiDir%\nvHLSLExtnsInternal.h %NvApiTargetDir%
-    copy /y %NvApiDir%\nvShaderExtnEnums.h %NvApiTargetDir%
+    copy /y "%NvApiDir%\nvHLSLExtns.h" "%NvApiTargetDir%"
+    copy /y "%NvApiDir%\nvHLSLExtnsInternal.h" "%NvApiTargetDir%"
+    copy /y "%NvApiDir%\nvShaderExtnEnums.h" "%NvApiTargetDir%"
 )
 
 rem Copy NanoVDB
@@ -54,7 +54,7 @@ set NanoVDBApiDir=%ExtDir%\nanovdb
 set NanoVDBTargetDir=%OutDir%\Shaders\NanoVDB
 if exist %NanoVDBApiDir% (
     if not exist %NanoVDBTargetDir% mkdir %NanoVDBTargetDir% >nul
-    copy /y %NanoVDBApiDir%\include\nanovdb\PNanoVDB.h %NanoVDBTargetDir%
+    copy /y "%NanoVDBApiDir%\include\nanovdb\PNanoVDB.h" "%NanoVDBTargetDir%"
 )
 
 rem robocopy sets the error level to something that is not zero even if the copy operation was successful. Set the error level to zero
