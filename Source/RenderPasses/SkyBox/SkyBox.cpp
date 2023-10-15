@@ -121,7 +121,9 @@ SkyBox::SharedPtr SkyBox::create(RenderContext* pRenderContext, const Dictionary
 Dictionary SkyBox::getScriptingDictionary()
 {
     Dictionary dict;
-    dict[kTexName] = mTexPath;
+    if (!mTexPath.empty()) {
+        dict[kTexName] = mTexPath;
+    }
     dict[kLoadAsSrgb] = mLoadSrgb;
     dict[kFilter] = mFilter;
     return dict;
