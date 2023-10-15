@@ -111,7 +111,7 @@ int main(int argc, char** argv)
     FalcorTest::UniquePtr pRenderer = std::make_unique<FalcorTest>(options);
     SampleConfig config;
     config.windowDesc.title = "FalcorTest";
-#ifdef FALCOR_HAS_D3D12
+#if FALCOR_HAS_D3D12
     config.windowDesc.mode = Window::WindowMode::Minimized;
 #else
     // Vulkan does not allow creating a swapchain on a minimized window.
