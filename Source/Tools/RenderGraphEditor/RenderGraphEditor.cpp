@@ -468,7 +468,7 @@ void RenderGraphEditor::loadGraphsFromFile(const std::filesystem::path& path, co
             mCurrentGraphIndex = mpGraphs.size();
             mpGraphs.push_back(pGraph);
             mRenderGraphUIs.push_back(RenderGraphUI(mpGraphs[mCurrentGraphIndex], name));
-
+            pGraph->onResize(getTargetFbo().get());
             Gui::DropdownValue nextGraphID;
             mGraphNamesToIndex.insert(std::make_pair(name, static_cast<uint32_t>(mCurrentGraphIndex)));
             nextGraphID.value = static_cast<int32_t>(mOpenGraphNames.size());
