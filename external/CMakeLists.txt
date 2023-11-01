@@ -48,6 +48,8 @@ add_subdirectory(pybind11)
 # vulkan-headers
 add_subdirectory(vulkan-headers)
 
+# tinyxml2
+add_subdirectory(tinyxml2)
 
 # -----------------------------------------------------------------------------
 # Dependencies in local files
